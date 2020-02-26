@@ -13,7 +13,7 @@ import static lombok.AccessLevel.PRIVATE;
 @Data
 @FieldDefaults(level = PRIVATE)
 @NoArgsConstructor
-public class Reservation {
+class Reservation {
 
     @Id
     @GeneratedValue

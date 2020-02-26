@@ -1,6 +1,7 @@
 package com.adam.cosmose.hotel.domain;
 
 import com.adam.cosmose.hotel.dto.SearchRoomResultDto;
+import com.adam.cosmose.hotel.enums.RoomType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
@@ -20,7 +21,7 @@ import static lombok.AccessLevel.PRIVATE;
         uniqueConstraints = @UniqueConstraint(columnNames = {"hotel_id", "roomType"})
 )
 @NoArgsConstructor
-public class Room {
+class Room {
 
     @Id
     @GeneratedValue
@@ -48,10 +49,6 @@ public class Room {
                 "roomType: " + this.roomType +
                 "hotel: " + this.hotel.getId() +
                 "reservations size: " + this.reservations.size();
-    }
-
-    public enum RoomType {
-        CLASSIC, DELUXE, EXECUTIVE
     }
 
     public Room(BigDecimal dailyPrice, Long numberOfRooms, RoomType roomType) {

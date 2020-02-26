@@ -1,6 +1,7 @@
 package com.adam.cosmose.hotel.domain;
 
 import com.adam.cosmose.hotel.dto.*;
+import com.adam.cosmose.hotel.enums.RoomType;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -112,7 +113,7 @@ public class HotelService {
     private void saveHotelOne() {
         Customer cus1 = new Customer("Adam", "ss@ss.pl");
         Hotel hotel = new Hotel("Golab", "Bialystok");
-        Room room1 = new Room(new BigDecimal("200"), 50L, Room.RoomType.CLASSIC);
+        Room room1 = new Room(new BigDecimal("200"), 50L, RoomType.CLASSIC);
         hotel.addRoom(room1);
         Reservation res1 = new Reservation(LocalDate.now(), LocalDate.now().plusDays(2));
         customerRepository.save(cus1);
@@ -124,12 +125,12 @@ public class HotelService {
     private void saveHotelTwo() {
         Customer cus1 = new Customer("Marian", "aa@aa.pl");
         Hotel hotel = new Hotel("Zamenhoff", "Bialystok");
-        Room room1 = new Room(new BigDecimal("150"), 2L, Room.RoomType.DELUXE);
-        Room room2 = new Room(new BigDecimal("210"), 2L, Room.RoomType.EXECUTIVE);
+        Room room1 = new Room(new BigDecimal("150"), 2L, RoomType.DELUXE);
+        Room room2 = new Room(new BigDecimal("210"), 2L, RoomType.EXECUTIVE);
         hotel.addRoom(room1);
         hotel.addRoom(room2);
-        Reservation res1 = new Reservation(LocalDate.parse("2020-02-23"), LocalDate.parse("2020-02-25"));
-        Reservation res2 = new Reservation(LocalDate.parse("2020-02-15"), LocalDate.parse("2020-02-29"));
+        Reservation res1 = new Reservation(LocalDate.parse("2020-03-01"), LocalDate.parse("2020-03-03"));
+        Reservation res2 = new Reservation(LocalDate.parse("2020-02-25"), LocalDate.parse("2020-03-10"));
         customerRepository.save(cus1);
         cus1.addReservation(res1);
         cus1.addReservation(res2);

@@ -1,5 +1,6 @@
 package com.adam.cosmose.hotel.domain;
 
+import com.adam.cosmose.hotel.enums.RoomType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
@@ -39,42 +40,42 @@ class FindAvailableRoomsTests {
     @Test
     void findsRooms() {
         List<Room> rooms = roomRepository.findAvailableRooms("Bialystok", lessThanCheaper, moreThanExpensive,
-                LocalDate.parse("2020-02-10"),  LocalDate.parse("2020-02-14"));
+                LocalDate.parse("2020-02-10"), LocalDate.parse("2020-02-14"));
         assertThat(rooms).hasSize(2);
     }
 
     @Test
     void findsOneRoomBecausePriceMatches() {
         List<Room> rooms = roomRepository.findAvailableRooms("Bialystok", lessThanCheaper, cheaperRoomPrice,
-                LocalDate.parse("2020-02-10"),  LocalDate.parse("2020-02-15"));
+                LocalDate.parse("2020-02-10"), LocalDate.parse("2020-02-15"));
         assertThat(rooms).hasSize(1);
     }
 
     @Test
     void doesntFindRoomsBecauseCityDoesntMatch() {
         List<Room> rooms = roomRepository.findAvailableRooms("Warszawa", lessThanCheaper, moreThanExpensive,
-                LocalDate.parse("2020-02-10"),  LocalDate.parse("2020-02-14"));
+                LocalDate.parse("2020-02-10"), LocalDate.parse("2020-02-14"));
         assertThat(rooms).isEmpty();
     }
 
     @Test
     void doesntFindRoomsBecausePriceFromTooHigh() {
         List<Room> rooms = roomRepository.findAvailableRooms("Bialystok", moreThanExpensive, bigDecimal("250"),
-                LocalDate.parse("2020-02-10"),  LocalDate.parse("2020-02-14"));
+                LocalDate.parse("2020-02-10"), LocalDate.parse("2020-02-14"));
         assertThat(rooms).isEmpty();
     }
 
     @Test
     void doesntFindRoomsBecausePriceToTooLow() {
         List<Room> rooms = roomRepository.findAvailableRooms("Bialystok", bigDecimal("20"), lessThanCheaper,
-                LocalDate.parse("2020-02-10"),  LocalDate.parse("2020-02-14"));
+                LocalDate.parse("2020-02-10"), LocalDate.parse("2020-02-14"));
         assertThat(rooms).isEmpty();
     }
 
     @Test
     void doesntFindRoomsBecauseDatesOverlap() {
         List<Room> rooms = roomRepository.findAvailableRooms("Bialystok", lessThanCheaper, cheaperRoomPrice,
-                LocalDate.parse("2020-02-24"),  LocalDate.parse("2020-02-26"));
+                LocalDate.parse("2020-02-24"), LocalDate.parse("2020-02-26"));
         assertThat(rooms).isEmpty();
     }
 
@@ -85,8 +86,8 @@ class FindAvailableRoomsTests {
 
     private void saveHotelAndRoom(Long customerId) {
         Hotel hotel = new Hotel("Zamenhoff", "Bialystok");
-        Room room1 = new Room(cheaperRoomPrice, 2L, Room.RoomType.DELUXE);
-        Room room2 = new Room(expensiveRoomPrice, 2L, Room.RoomType.EXECUTIVE);
+        Room room1 = new Room(cheaperRoomPrice, 2L, RoomType.DELUXE);
+        Room room2 = new Room(expensiveRoomPrice, 2L, RoomType.EXECUTIVE);
         Reservation res1 = new Reservation(LocalDate.parse("2020-02-23"), LocalDate.parse("2020-02-25"));
         Reservation res2 = new Reservation(LocalDate.parse("2020-02-15"), LocalDate.parse("2020-02-29"));
         Customer persistedCus = entityManager.find(Customer.class, customerId);

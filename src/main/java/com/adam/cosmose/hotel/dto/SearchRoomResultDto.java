@@ -1,6 +1,6 @@
 package com.adam.cosmose.hotel.dto;
 
-import com.adam.cosmose.hotel.domain.Room;
+import com.adam.cosmose.hotel.enums.RoomType;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -11,5 +11,5 @@ public class SearchRoomResultDto {
     String hotelName;
     String city;
     BigDecimal price;
-    Room.RoomType roomType;
+    RoomType roomType;
 }

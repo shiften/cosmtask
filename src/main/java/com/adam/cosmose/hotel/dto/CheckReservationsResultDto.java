@@ -1,6 +1,6 @@
 package com.adam.cosmose.hotel.dto;
 
-import com.adam.cosmose.hotel.domain.Room;
+import com.adam.cosmose.hotel.enums.RoomType;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -11,7 +11,7 @@ public class CheckReservationsResultDto {
 
     Long reservationId;
     String hotelName;
-    Room.RoomType roomType;
+    RoomType roomType;
     BigDecimal dailyPrice;
     LocalDate startDay;
     LocalDate endDay;
