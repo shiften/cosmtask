@@ -11,7 +11,7 @@
 	<groupId>com.adam</groupId>
 	<artifactId>cosmtask</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>cosmose</name>
+	<name>cosmtask</name>
 	<description>Recruitment task</description>
 
 	<properties>
