@@ -9,14 +9,11 @@ import org.springframework.stereotype.Repository;
 import javax.persistence.LockModeType;
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface RoomRepository extends JpaRepository<Room, Long> {
-
-    List<Room> findAllByIdNotIn(Collection<Long> ids);
+interface RoomRepository extends JpaRepository<Room, Long> {
 
     @Query("select r from Room r left join r.hotel h where h.city = :city" +
             " and (:dailyPriceFrom is null or r.dailyPrice >= :dailyPriceFrom) " +

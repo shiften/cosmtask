@@ -35,7 +35,7 @@ Accept: application/json
 ###
 
 //delete reservation
-DELETE http://localhost:8080/api/hotel/reservations/cancel/14
+DELETE http://localhost:8080/api/hotel/reservations/cancel/12
 Content-Type: application/json
 
 ###
