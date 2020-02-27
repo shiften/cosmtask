@@ -1,7 +1,7 @@
-package com.adam.cosmose.hotel.domain;
+package com.adam.cosmtask.hotel.domain;
 
-import com.adam.cosmose.hotel.dto.SearchRoomResultDto;
-import com.adam.cosmose.hotel.enums.RoomType;
+import com.adam.cosmtask.hotel.dto.SearchRoomResultDto;
+import com.adam.cosmtask.hotel.enums.RoomType;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;

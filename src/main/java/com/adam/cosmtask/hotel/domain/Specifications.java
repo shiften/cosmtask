@@ -1,6 +1,4 @@
-package com.adam.cosmose.hotel.domain;
-
-import org.springframework.data.jpa.domain.Specification;
+package com.adam.cosmtask.hotel.domain;
 
 public class Specifications {
 

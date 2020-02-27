@@ -1,6 +1,6 @@
-package com.adam.cosmose.hotel.dto;
+package com.adam.cosmtask.hotel.dto;
 
-import com.adam.cosmose.hotel.enums.RoomType;
+import com.adam.cosmtask.hotel.enums.RoomType;
 import lombok.Data;
 
 import java.math.BigDecimal;

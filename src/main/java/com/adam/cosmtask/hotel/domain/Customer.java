@@ -1,6 +1,6 @@
-package com.adam.cosmose.hotel.domain;
+package com.adam.cosmtask.hotel.domain;
 
-import com.adam.cosmose.hotel.dto.RegisterCustomerDto;
+import com.adam.cosmtask.hotel.dto.RegisterCustomerDto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;

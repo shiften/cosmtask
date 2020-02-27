@@ -1,6 +1,6 @@
-package com.adam.cosmose.hotel.domain;
+package com.adam.cosmtask.hotel.domain;
 
-import com.adam.cosmose.hotel.enums.RoomType;
+import com.adam.cosmtask.hotel.enums.RoomType;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;

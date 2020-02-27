@@ -1,4 +1,4 @@
-package com.adam.cosmose.hotel.dto;
+package com.adam.cosmtask.hotel.dto;
 
 import lombok.Value;
 

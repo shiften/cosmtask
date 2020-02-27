@@ -1,12 +1,10 @@
-package com.adam.cosmose.hotel.dto;
+package com.adam.cosmtask.hotel.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.Value;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 
 @Data
 @AllArgsConstructor

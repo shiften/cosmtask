@@ -1,11 +1,11 @@
-package com.adam.cosmose.hotel.controller;
+package com.adam.cosmtask.hotel.controller;
 
 
-import com.adam.cosmose.hotel.domain.HotelService;
-import com.adam.cosmose.hotel.dto.BookRoomDto;
-import com.adam.cosmose.hotel.dto.CheckReservationsResultDto;
-import com.adam.cosmose.hotel.dto.SearchRoomDto;
-import com.adam.cosmose.hotel.dto.SearchRoomResultDto;
+import com.adam.cosmtask.hotel.domain.HotelService;
+import com.adam.cosmtask.hotel.dto.BookRoomDto;
+import com.adam.cosmtask.hotel.dto.CheckReservationsResultDto;
+import com.adam.cosmtask.hotel.dto.SearchRoomDto;
+import com.adam.cosmtask.hotel.dto.SearchRoomResultDto;
 import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.*;
 

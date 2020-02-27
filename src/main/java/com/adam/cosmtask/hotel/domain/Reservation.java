@@ -1,4 +1,4 @@
-package com.adam.cosmose.hotel.domain;
+package com.adam.cosmtask.hotel.domain;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

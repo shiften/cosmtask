@@ -1,7 +1,7 @@
-package com.adam.cosmose.hotel.domain;
+package com.adam.cosmtask.hotel.domain;
 
-import com.adam.cosmose.hotel.dto.*;
-import com.adam.cosmose.hotel.enums.RoomType;
+import com.adam.cosmtask.hotel.dto.*;
+import com.adam.cosmtask.hotel.enums.RoomType;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import static com.adam.cosmose.hotel.domain.Customer.fromDto;
+import static com.adam.cosmtask.hotel.domain.Customer.fromDto;
 import static lombok.AccessLevel.PRIVATE;
 
 @Service

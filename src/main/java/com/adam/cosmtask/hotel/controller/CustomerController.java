@@ -1,7 +1,7 @@
-package com.adam.cosmose.hotel.controller;
+package com.adam.cosmtask.hotel.controller;
 
-import com.adam.cosmose.hotel.domain.HotelService;
-import com.adam.cosmose.hotel.dto.RegisterCustomerDto;
+import com.adam.cosmtask.hotel.domain.HotelService;
+import com.adam.cosmtask.hotel.dto.RegisterCustomerDto;
 import lombok.experimental.FieldDefaults;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
