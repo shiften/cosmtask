@@ -104,8 +104,7 @@ public class HotelService {
         room.removeReservation(reservation);
     }
 
-    @Transactional
-    public void insertTestData() {
+    private void insertTestData() {
         saveHotelOne();
         saveHotelTwo();
     }
